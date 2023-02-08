@@ -80,8 +80,8 @@ document.addEventListener('DOMContentLoaded', function() {
         var source = response[0]['flag']
         console.log(source)
         var flag = $(`<img id="flag" src="${response[0]['flags']['png']}" alt="flag">`)
-        $('#covid_data').empty()
-        $('#covid_data').append(flag)
+        $('#country_info').empty()
+        $('#country_info').append(flag)
         console.log(response)
         // $('#covid_data').text(response[0]['population'])
 
