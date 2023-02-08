@@ -1,0 +1,13 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.data {
+    width: 45%;
+    height: 200px;
+    background-color: aliceblue;
+    margin: 10px;
+}
