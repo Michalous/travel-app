@@ -11,17 +11,36 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Travel app</h1>
+
+    <!-- Jumbotron -->
+    <div class="jumbotron" id="banner">
+        <div class="jumboCopy" id="jumboText">
+        <h1 class="display-4">Safety Travel Tracker</h1>
+        <p class="lead">Search below for the earhtquake status and facts about your country of choice.</p>
+        </div>
+    </div>
+
+    <!-- Search bar -->
     <input id="search_input" type="text" placeholder="enter the city">
     <button id="search_btn">Submit</button>
     <div id="results"></div>
+
+    <!-- APIs -->
+    <!-- Earthquake -->
     <div class="data" id="earthquake">
         <h2>Earthquakes:</h2>
         <span id="earthquake_data"></span>
     </div>
+    <!-- Info -->
     <div class="data" id="covid">
-        <h2>Covid:</h2>
-        <span id="covid_data"></span>
+        <h2>Facts:</h2>
+        <span id="country_info"></span>
     </div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <p> Created by Michal, Monica, Musleha + Osita</p>
+    </footer> 
+
 </body>
 </html>
