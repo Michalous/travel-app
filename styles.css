@@ -70,20 +70,13 @@ body {
     width: 100%;
     height: 400px;
     margin: 10px;
-
 }
 
-#searchedCard {
-    width: 600px;
-}
-
-#previousSearch {
-    height: 150px;
-}
 
 #clearBtn {
     background-color: grey;
 }
+
 
 /*Footer*/
 
