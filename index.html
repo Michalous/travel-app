@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
+    <title>Safety Travel Tracker</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="countryObject.js"></script>
     <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -17,33 +19,59 @@
     <!-- Jumbotron -->
     <div class="jumbotron" id="banner">
         <div class="jumboCopy" id="jumboText">
-        <h1 class="display-4">Safety Travel Tracker</h1>
-        <p class="lead">Search below for the earthquake status and facts about your country of choice.</p>
+            <h1 class="display-4">Safety Travel Tracker</h1>
+                <p class="lead" id="extraJumboText">Search below for the earhtquake status and facts about your country of choice.</p>
+        
+        <!-- Search bar -->
+            <input id="search_input" type="text" placeholder="enter the city">
+            <button id="search_btn">Submit</button>
+            <div id="results"></div>
+
+        </div>
+    </div>
+    <br>
+
+    <!-- APIs -->
+    <!-- Earthquake --> 
+    <div class="container-fluid" id="APIsection">
+
+        <div class="row">
+        <div class="cardContainer text-center col-lg-6 col-md-6 col-sm-12">
+            <div class="card data" id="earthquake">
+            <h2 class="card-header">Earthquakes:</h2>
+            <div class="card-body">
+                <span id="earthquake_data"></span>
+            </div>
+            </div>
+        </div>
+
+    <!-- Info -->
+        <div class="cardContainer text-center col-lg-6 col-md-6 col-sm-12">
+            <div class="card data" id="facts">
+            <h2 class="card-header">Facts:</h2>
+            <div class="card-body">
+                <span id="country_info"></span>
+            </div>
+            </div>
+        </div>
         </div>
     </div>
 
-    <!-- Search bar -->
-    <input id="search_input" type="text" placeholder="enter the city">
-    <button id="search_btn">Submit</button>
-
-    <div id="results"></div>
-
-
-    <!-- APIs -->
-    <!-- Earthquake -->
-    <div class="data" id="earthquake">
-        <h2>Earthquakes:</h2>
-        <span id="earthquake_data"></span>
-    </div>
-    <!-- Info -->
-    <div class="data" id="covid">
-        <h2>Facts:</h2>
-        <span id="country_info"></span>
-    </div>
+    <!-- Previous searches -->
+    <div class="card text-center">
+        <div class="card-header" id="searchedCard">
+          Previous searches
+        </div>
+        <div class="card-body">
+          <div class="card-text" id="previousSearch">
+          </div>
+          <a href="#" class="btn btn-primary" id="clearBtn">Clear searches</a>
+        </div>
+      </div>
 
     <!-- Footer -->
     <footer id="footer">
-        <p> Created by Michal, Monica, Musleha + Osita</p>
+        <p id="footerText"> Created by Michal, Monica, Musleha + Osita</p>
     </footer> 
 
 </body>

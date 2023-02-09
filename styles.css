@@ -5,11 +5,100 @@ body {
     align-items: center;
 }
 
-.data {
-    width: 45%;
-    height: 200px;
-    background-color: aliceblue;
-    margin: 10px;
+.display-4 {
+    font-family:'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+    color:white;
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 1.2;
+    text-transform: uppercase;
 }
 
-/* Changes here */
+.lead {
+    font-family:'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+    font-size: 1.25rem;
+    font-weight: 400; 
+    line-height: 1.5;
+    margin-top: 350px;
+    margin-left: 100px;
+    text-align: center;
+}
+    
+
+/*Jumbotron*/
+
+.jumbotron {
+    background-image: url("./Images/travel-image-unsplash.jpg");
+    background-color: transparent;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: calc(100vh - 50px);
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.jumboCopy {
+    width: 70%;
+    min-width: 500px;
+    max-width: 700px;
+    color: white;
+    text-align: center;
+}
+
+#search_input {
+    margin-top: 100px;
+    margin-right: 100px;
+
+}
+
+#search_btn {
+    margin-right: 30px;
+}
+
+/*API Cards*/
+
+.cardContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.data {
+    width: 100%;
+    height: 400px;
+    margin: 10px;
+
+}
+
+#searchedCard {
+    width: 600px;
+}
+
+#previousSearch {
+    height: 150px;
+}
+
+#clearBtn {
+    background-color: grey;
+}
+
+/*Footer*/
+
+#footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    font-size: 20px;
+    background-color: rgb(202, 200, 200);
+    width: 100%;
+    margin: 15px;
+}
+
+#footerText {
+    padding: 15px;
+    color: white;
+}
