@@ -20,16 +20,24 @@
     <div class="jumbotron" id="banner">
         <div class="jumboCopy" id="jumboText">
             <h1 class="display-4">Safety Travel Tracker</h1>
-            <p class="lead" id="extraJumboText">Search below for the earhtquake status and facts about your country of choice.</p>
-        
-        <!-- Search bar -->
-            <input id="search_input" type="text" placeholder="enter the city">
-            <button id="search_btn">Submit</button>
-            <div id="results"></div>
+            <p class="lead" id="extraJumboText">Search below for the earthquake status and facts about your country of choice.</p>
 
+             <!-- Search bar -->
+
+            <form>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search_input"  aria-describedby="enterCountry" placeholder="Enter the city">
+                </div>
+                <button type="submit" id="search_btn" class="btn btn-primary">Submit</button>
+                <div id="results"></div>
+            </form>
         </div>
     </div>
-    <br>
+
+              
+
+        
+
 
     <!-- APIs -->
     <!-- Earthquake --> 
