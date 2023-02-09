@@ -57,17 +57,33 @@
         </div>
     </div>
 
-    <!-- Previous searches -->
-    <div class="card text-center">
-        <div class="card-header" id="searchedCard">
-          Previous searches
-        </div>
-        <div class="card-body">
-          <div class="card-text" id="previousSearch">
-          </div>
-          <a href="#" class="btn btn-primary" id="clearBtn">Clear searches</a>
-        </div>
-      </div>
+
+    <div class="container-fluid" id="moreSection">
+
+            <div class="row">
+            <!-- Map -->
+            <div class="cardContainer text-center col-lg-6 col-md-6 col-sm-12">
+                <div class="card data" id="map">
+                <h2 class="card-header">Map:</h2>
+                <div class="card-body">
+                    <span id="country_map"></span>
+                </div>
+                </div>
+            </div>
+
+            <!-- Info -->   
+
+            <div class="cardContainer text-center col-lg-6 col-md-6 col-sm-12">
+                <div class="card data" id="searches">
+                <h2 class="card-header">Previous searches:</h2>
+                <div class="card-body">
+                    <span id="previousSearch"></span>
+                </div>
+                <a href="#" class="btn btn-primary" id="clearBtn">Clear searches</a>
+                </div>
+            </div>
+            </div>
+    </div>
 
     <!-- Footer -->
     <footer id="footer">
