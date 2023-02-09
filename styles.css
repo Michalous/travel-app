@@ -73,6 +73,18 @@ body {
 
 }
 
+#searchedCard {
+    width: 600px;
+}
+
+#previousSearch {
+    height: 150px;
+}
+
+#clearBtn {
+    background-color: grey;
+}
+
 /*Footer*/
 
 #footer {
@@ -83,6 +95,7 @@ body {
     font-size: 20px;
     background-color: rgb(202, 200, 200);
     width: 100%;
+    margin: 15px;
 }
 
 #footerText {
