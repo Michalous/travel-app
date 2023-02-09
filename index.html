@@ -20,6 +20,7 @@
     <div class="jumbotron" id="banner">
         <div class="jumboCopy" id="jumboText">
             <h1 class="display-4">Safety Travel Tracker</h1>
+
                 <p class="lead" id="extraJumboText">Search below for the earhtquake status and facts about your country of choice.</p>
         
         <!-- Search bar -->
@@ -27,9 +28,20 @@
             <button id="search_btn">Submit</button>
             <div id="results"></div>
 
+            <form>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search_input"  aria-describedby="enterCountry" placeholder="Enter the city">
+                </div>
+                <button type="submit" id="search_btn" class="btn btn-primary">Submit</button>
+                <div id="results"></div>
+            </form>
         </div>
     </div>
-    <br>
+
+              
+
+        
+
 
     <!-- APIs -->
     <!-- Earthquake --> 
@@ -57,17 +69,33 @@
         </div>
     </div>
 
-    <!-- Previous searches -->
-    <div class="card text-center">
-        <div class="card-header" id="searchedCard">
-          Previous searches
-        </div>
-        <div class="card-body">
-          <div class="card-text" id="previousSearch">
-          </div>
-          <a href="#" class="btn btn-primary" id="clearBtn">Clear searches</a>
-        </div>
-      </div>
+
+    <div class="container-fluid" id="moreSection">
+
+            <div class="row">
+            <!-- Map -->
+            <div class="cardContainer text-center col-lg-6 col-md-6 col-sm-12">
+                <div class="card data" id="map">
+                <h2 class="card-header">Map:</h2>
+                <div class="card-body">
+                    <span id="country_map"></span>
+                </div>
+                </div>
+            </div>
+
+            <!-- Info -->   
+
+            <div class="cardContainer text-center col-lg-6 col-md-6 col-sm-12">
+                <div class="card data" id="searches">
+                <h2 class="card-header">Previous searches:</h2>
+                <div class="card-body">
+                    <span id="previousSearch"></span>
+                </div>
+                <a href="#" class="btn btn-primary" id="clearBtn">Clear searches</a>
+                </div>
+            </div>
+            </div>
+    </div>
 
     <!-- Footer -->
     <footer id="footer">

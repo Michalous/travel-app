@@ -52,11 +52,12 @@ body {
     margin-top: 100px;
     margin-right: 100px;
 
-}
+} */
 
 #search_btn {
+
     margin-right: 30px;
-}
+} 
 
 /*API Cards*/
 
@@ -70,20 +71,13 @@ body {
     width: 100%;
     height: 400px;
     margin: 10px;
-
 }
 
-#searchedCard {
-    width: 600px;
-}
-
-#previousSearch {
-    height: 150px;
-}
 
 #clearBtn {
     background-color: grey;
 }
+
 
 /*Footer*/
 
