@@ -4,4 +4,4 @@ Bootcamp project
 
 ## Description
 
-This is a safety travel app
+This is a safety travel tracker app
