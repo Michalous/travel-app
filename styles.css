@@ -75,11 +75,6 @@ body {
 }
 
 
-#clearBtn {
-    background-color: grey;
-}
-
-
 /*Footer*/
 
 #footer {
@@ -96,4 +91,18 @@ body {
 #footerText {
     padding: 15px;
     color: white;
+}
+
+
+/*Buttons*/
+
+.ourButtons {
+    background-color: grey;
+    border: none;: none;
+}
+
+
+button.launch:hover {
+    cursor: pointer;
+    background-color: black;
 }
