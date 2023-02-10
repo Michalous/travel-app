@@ -17,8 +17,8 @@ body {
 
 .lead {
     font-family:'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
-    color: black;
-    font-size: 1rem;
+    color: white;
+    font-size: 1.1rem;
     font-weight: 500; 
     line-height: 1.5;
     text-align: center;
@@ -75,11 +75,6 @@ body {
 }
 
 
-#clearBtn {
-    background-color: grey;
-}
-
-
 /*Footer*/
 
 #footer {
@@ -96,4 +91,18 @@ body {
 #footerText {
     padding: 15px;
     color: white;
+}
+
+
+/*Buttons*/
+
+.ourButtons {
+    background-color: grey;
+    border: none;: none;
+}
+
+
+button.launch:hover {
+    cursor: pointer;
+    background-color: black;
 }

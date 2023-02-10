@@ -29,13 +29,12 @@
                 <div class="form-group">
                   <input type="text" class="form-control" id="search_input"  aria-describedby="enterCity" placeholder="Enter the city">
                 </div>
-                <button type="button" id="search_btn" class="btn btn-primary">Submit</button>
+                <button type="button" id="search_btn" class="btn btn-secondary">Submit</button>
                 <div id="results"></div>
             </form>
         </div>
     </div>
-
-              
+       
 
     <!-- APIs -->
     <!-- Earthquake --> 
@@ -66,34 +65,64 @@
 
     <div class="container-fluid" id="moreSection">
 
-            <div class="row">
-            <!-- Map -->
-            <div class="cardContainer text-center col-lg-6 col-md-6 col-sm-12">
-                <div class="card data" id="map">
-                <h2 class="card-header">Map:</h2>
-                <div class="card-body">
-                    <span id="country_map"></span>
-                </div>
-                </div>
+        <div class="row">
+        <!-- Map -->
+        <div class="cardContainer text-center col-lg-6 col-md-6 col-sm-12">
+            <div class="card data" id="map">
+            <h2 class="card-header">Map:</h2>
+            <div class="card-body">
+                <span id="country_map"></span>
             </div>
+            </div>
+        </div>
 
             <!-- Info -->   
 
-            <div class="cardContainer text-center col-lg-6 col-md-6 col-sm-12">
-                <div class="card data" id="searches">
-                <h2 class="card-header">Previous searches:</h2>
-                <div class="card-body">
-                    <span id="previousSearch"></span>
-                </div>
-                <a href="#" class="btn btn-primary" id="clearBtn">Clear searches</a>
-                </div>
+        <div class="cardContainer text-center col-lg-6 col-md-6 col-sm-12">
+            <div class="card data" id="searches">
+            <h2 class="card-header">Previous searches:</h2>
+            <div class="card-body">
+                <span id="previousSearch"></span>
             </div>
+            <a href="#" class="btn btn-primary ourButtons">Clear searches</a>
             </div>
+        </div>
+        </div>
     </div>
 
     <!-- Footer -->
     <footer id="footer">
         <p id="footerText"> Created by Michal, Monica, Musleha + Osita</p>
+
+         <!-- Button to Open the Modal -->
+        <button type="button" class="btn btn-primary ourButtons" data-toggle="modal" data-target="#myModal">
+        Want to know more?
+        </button>
+  
+        <!-- The Modal -->
+        <div class="modal" id="myModal">  
+        <div class="modal-dialog">
+        <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">About Us</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          We are a group of students learning Front-End Web Development students through the Skills Bootcamp.<br><br>This is our first project, we hope it's useful! 
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger ourButtons" data-dismiss="modal">Close</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
     </footer> 
 
 </body>
