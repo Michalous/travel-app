@@ -1,5 +1,7 @@
-# travel-app
+# Travel-Tracker App
 Bootcamp project
+
+Travel-Tracker App Project
 
 
 ## Description
@@ -10,7 +12,7 @@ The travel tracker app gives you up-to-date information on earthquake status and
 
 Advances in Technology have been proven to be helpful. This Travel tracker app integrated data from two server-side APIs request from openweathermap.org and rapidapi latest earthquake near me apps.
 
-The app was created using agile development methodologies. We implement feature and bug fixes using git branch workflow and pull requests.
+The app was created using agile development methodologies. We implemented feature and bug fixes using git branch workflow and pull requests.
 
 
 
