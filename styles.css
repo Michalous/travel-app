@@ -33,7 +33,7 @@ body {
     background-color: transparent;
     background-size: cover;
     background-repeat: no-repeat;
-    height: calc(100vh - 50px);
+    height: calc(90vh);
     display: flex;
     align-items: start;
     justify-content: center;
@@ -49,10 +49,8 @@ body {
     text-align: center;
 }
 
-#search_input {
-
-    
-
+.result {
+    color: black;
 }
 
 #search_btn {
