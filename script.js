@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', function() {
                             var slug = listOfCountryObjects[i]['Slug']
                         }
                     }
-                    displayMap(locData[0], locData[1])
                     console.log(slug)
                     fetch(`https://everyearthquake.p.rapidapi.com/latestEarthquakeNearMe?latitude=${locData[0]}&longitude=${locData[1]}`, options)
                         .then(response => response.json())
@@ -87,11 +86,4 @@ document.addEventListener('DOMContentLoaded', function() {
         // $('#covid_data').text(response[0]['population'])
 
     }
-
-    function displayMap(lat, lon) {
-        $('#map').empty()
-        var mapToDisplay =  `<iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/view?key=AIzaSyB3QTuugkMPxf0T9jl4um4NovYGsnTO2lM&center=${lat},${lon}&zoom=6" allowfullscreen></iframe>`
-        $('#map').append(mapToDisplay)
-     }
-
 })
