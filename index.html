@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="countryObject.js"></script>
     <script src="script.js"></script>
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -27,10 +28,14 @@
             
             <form>
                 <div class="form-group">
-                  <input type="text" class="form-control" id="search_input"  aria-describedby="enterCity" placeholder="Enter the city">
+                  <input type="text" class="form-control" id="search_input"  aria-describedby="enterCity" placeholder="Enter the city:">
+                    <i class="fa-solid fa-magnifying-glass myGlass"></i>
                 </div>
-                <button type="button" id="search_btn" class="btn btn-secondary">Submit</button>
                 <div id="results"></div>
+                <button type="button" id="search_btn" class="btn btn-secondary">Search</button>
+                <button type="button" class="btn btn-secondary" id="lucky" data-toggle="tooltip" data-placement="top" title="We'll choose destination for you">Feeling lucky!</button>
+                
+                </div>
             </form>
         </div>
     </div>
