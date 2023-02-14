@@ -34,7 +34,7 @@ The app was created using agile development methodologies. We implemented featur
 
 ## Usage
 
-We created the travel app using what we have learned so far from the Bootcamp. These includes Html, Javascript, CSS, Bootsrap
+We created the travel app using what we have learned so far from the Bootcamp. These includes Html, Javascript, CSS, and Bootstrap.
 
 
 
