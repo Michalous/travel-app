@@ -130,13 +130,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // displays cities saved in local storage
     function displayHistory() {
-        $('#searches').empty()
+        $('#previousSearch').empty()
         if (window.localStorage.getItem("cityObj") != null) {
             var myObj = window.localStorage.getItem("cityObj")
             myObj = JSON.parse(myObj)
             for (var i in myObj) {
                 var button = $(`<button class="historyBtn" data-lat="${myObj[i][0]}" data-lon="${myObj[i][1]}" data-countryName="${myObj[i][2]}" data-country="${myObj[i][3]}" data-name="${i}"></button>`).text(i)
-                $('#searches').prepend(button)
+                $('#previousSearch').prepend(button)
             }   
         }
         clickHistory()
