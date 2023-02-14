@@ -98,7 +98,8 @@
 }
 
 h2 {
-    font-family: 'Stardos Stencil', cursive !important;
+    font-family:'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+    font-size: 25px;
 }
 
 .data {
