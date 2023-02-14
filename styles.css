@@ -1,15 +1,10 @@
-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+
 
 .display-4 {
     font-family:'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
-    color:white;
+    color: white;
     font-size: 3rem;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.2;
     text-transform: uppercase;
     margin-top: 300px;
@@ -22,32 +17,28 @@ body {
     font-weight: 500; 
     line-height: 1.5;
     text-align: center;
-    padding-top: 80px;
+    /* padding-top: 120px; */
 }
     
 
 /*Jumbotron*/
 
 .jumbotron {
+    position: relative;
     background-image: url("./Images/travel-image-unsplash.jpg");
-    background-color: transparent;
     background-size: cover;
     background-repeat: no-repeat;
-    height: calc(90vh);
-    display: flex;
-    align-items: start;
-    justify-content: center;
-    width: 100%;
-
-}
-
-.jumboCopy {
-    width: 70%;
-    min-width: 500px;
-    max-width: 700px;
-    color: white;
+    height: 100vh;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
 }
+
 
 .result {
     color: black;
@@ -57,7 +48,48 @@ body {
     margin-right: 30px;
 } 
 
+.myGlass {
+    position: relative;
+    top: -38px;
+    left: -45%;
+    font-size: 24px;
+    color: #000;
+}
+
+.form-control {
+        margin-top: 40px;
+        width: 70vw;
+        max-width: 700px;
+        height: 50px;
+        font-size: 25px;
+        padding-left: 60px;
+        border-radius: 20px;
+        border: 1px solid black;
+}
+
+#results {
+    margin-bottom: 25px;
+    background-color:rgb(252, 214, 166);
+    border-radius: 20px;
+
+}
+
+@media only screen and (max-width: 400px) {
+    #inputField {
+        font-size: 16px;
+    }
+
+    .myGlass {
+        left: -40%;
+        font-size: 16px;
+    }
+}
+    
+
+/*API Cards*/
+
 /*APIs*/
+
 
 .cardContainer {
     display: flex;
