@@ -45,7 +45,6 @@
 }
 
 #search_btn {
-
     margin-right: 30px;
 } 
 
@@ -89,16 +88,35 @@
 
 /*API Cards*/
 
+/*APIs*/
+
+
 .cardContainer {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+h2 {
+    font-family: 'Stardos Stencil', cursive !important;
+}
+
 .data {
     width: 100%;
     height: 400px;
     margin: 10px;
+}
+
+#flag {
+    width: 150px;
+    margin-bottom: 30px;
+}
+
+/*API icons*/
+.myIcon {
+    display: block; 
+    margin: 20px auto 45px; 
+    font-size: 75px;
 }
 
 
@@ -126,6 +144,7 @@
 .ourButtons {
     background-color: grey;
     border: none;
+    color: white !important;
 }
 
 
@@ -133,3 +152,4 @@ button.launch:hover {
     cursor: pointer;
     background-color: black;
 }
+
