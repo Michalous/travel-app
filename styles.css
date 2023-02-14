@@ -58,7 +58,7 @@ body {
     margin-right: 30px;
 } 
 
-/*API Cards*/
+/*APIs*/
 
 .cardContainer {
     display: flex;
@@ -66,10 +66,21 @@ body {
     justify-content: center;
 }
 
+h2 {
+    font-family: 'Stardos Stencil', cursive !important;
+}
+
 .data {
     width: 100%;
     height: 400px;
     margin: 10px;
+}
+
+/*API icons*/
+.myIcon {
+    display: block; 
+    margin: 20px auto 45px; 
+    font-size: 75px;
 }
 
 
@@ -96,7 +107,8 @@ body {
 
 .ourButtons {
     background-color: grey;
-    border: none;: none;
+    border: none;
+    color: white !important;
 }
 
 
@@ -104,3 +116,4 @@ button.launch:hover {
     cursor: pointer;
     background-color: black;
 }
+
