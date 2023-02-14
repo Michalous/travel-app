@@ -103,14 +103,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
    
     function showEarthQuakeData(response, countryName, name) {
-        $('#earthquake').empty()
+        $('#earthquake_results').empty()
         var last_earthquake = `<p>The last earthquake close to ${name} happened on ${response['data'][0]['date']}.</p>`
-        $('#earthquake').append(last_earthquake)
+        $('#earthquake_results').append(last_earthquake)
         var text_string = response['data'][0]['title']
         var magnitude = text_string.slice(2, 5)
         var earhquake_location = text_string.slice(8, text_string.length)
         var earthquake_magnitude = `<p>It had a magnitude of ${magnitude} and occured ${earhquake_location}</p>`
-        $('#earthquake').append(earthquake_magnitude)
+        $('#earthquake_results').append(earthquake_magnitude)
         console.log('hello', response)
     }
 
