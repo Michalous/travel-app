@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function fetchEarthquakeInfo(lat, lon, countryName, name) {
         $('#earthquake_data').empty()
-        $('#earthquake_data').append('<div class="kinetic"></div>')
+        $('#earthquake_data').append('<div id="quake-kinetic" class="kinetic"></div>')
         const options = {
             method: 'GET',
             headers: {
