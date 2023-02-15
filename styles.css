@@ -100,7 +100,7 @@ h1 {
 }
 
 .card-body {
-    background-color: rgb(188, 187, 187) ;
+    background-color: rgb(188, 187, 187);
 }
 
 h2 {
@@ -118,13 +118,22 @@ h2 {
 #flag {
     width: 150px;
     margin-bottom: 30px;
+    padding: 5px;
+}
+
+#country_info {
+    font-family: 'Stardos Stencil', cursive !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /*API icons*/
 .myIcon {
     display: block; 
     margin: 20px auto 45px; 
-    font-size: 55px;
+    font-size: 45px;
     color: white;
 }
 
