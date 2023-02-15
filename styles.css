@@ -1,8 +1,9 @@
 
 
 .display-4 {
+    /* font-family: 'Stardos Stencil', cursive !important; */
     font-family:'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
-    color: white;
+    color: black;
     font-size: 3rem;
     font-weight: 500;
     line-height: 1.2;
@@ -11,13 +12,15 @@
 }
 
 .lead {
+    /* font-family: 'Stardos Stencil', cursive !important; */
+
     font-family:'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
-    color: white;
+    color: black;
     font-size: 1.1rem;
     font-weight: 500; 
     line-height: 1.5;
     text-align: center;
-    /* padding-top: 120px; */
+    
 }
     
 
