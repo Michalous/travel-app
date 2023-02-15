@@ -1,7 +1,7 @@
 
 
 .display-4 {
-    /* font-family: 'Stardos Stencil', cursive !important; */
+    font-family: 'Stardos Stencil', cursive !important;
     font-family:'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
     color: black;
     font-size: 3rem;
@@ -12,9 +12,7 @@
 }
 
 .lead {
-    /* font-family: 'Stardos Stencil', cursive !important; */
-
-    font-family:'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+    font-family: 'Stardos Stencil', cursive !important;
     color: black;
     font-size: 1.1rem;
     font-weight: 500; 
