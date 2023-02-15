@@ -26,7 +26,7 @@ The travel app was design to be responsive so that it will scale with the size o
 
 In the Html, we incorporated Jumbotron feature for calling extra attention to the travel app search for information on earthquake status and facts about your city of choice and the background image. We also used Boostrap modal component a dialog popup/box window that a user will use for choosing their destination.
 
-As a user click the search button with the input of the city of their choice, the travel app will display the last earthquake close to that city and its magnitude. It will also diplay the flag of the country and the map   and the stored previous searches.
+As a user click the search button with the input of the city of their choice, the travel app will display the last earthquake close to that city and its magnitude. It will also display the flag of the country with it's map and facts about the city and the country. The travel app also display the stored previous searches.
 
 
 
