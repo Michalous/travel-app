@@ -2,7 +2,6 @@
 
 .display-4 {
     font-family: 'Stardos Stencil', cursive !important;
-    font-family:'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
     color: black;
     font-size: 3rem;
     font-weight: 500;
@@ -36,6 +35,10 @@ p {
     color: white;
     align-items: center;
     justify-content: center;
+}
+
+h1 {
+    font-family: 'Stardos Stencil', cursive !important;
 }
 
 
@@ -101,7 +104,7 @@ p {
 }
 
 h2 {
-    font-family:'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+    font-family: 'Stardos Stencil', cursive !important;
     font-size: 25px;
     color:white;
 }
@@ -147,10 +150,15 @@ h2 {
 
 /*Buttons*/
 
+button {
+    font-family: 'Stardos Stencil', cursive !important;
+}
+
 .ourButtons {
     background-color: grey;
     border: none;
     color: white !important;
+    font-family: 'Stardos Stencil', cursive !important;
 }
 
 
