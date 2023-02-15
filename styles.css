@@ -135,6 +135,13 @@ h2 {
     align-items: center;
 }
 
+.history {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 /*API icons*/
 .myIcon {
     display: block; 
