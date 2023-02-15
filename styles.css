@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Stardos+Stencil&display=swap');
 
-.display-4 {
+body {
+
     font-family: 'Stardos Stencil', cursive !important;
+
+h1 {
     color: black;
     font-size: 3rem;
     font-weight: 500;
@@ -10,8 +13,7 @@
     margin-top: 300px;
 }
 
-p {
-    font-family: 'Stardos Stencil', cursive !important;
+h6 {
     color: black;
     font-size: 1.1rem;
     font-weight: 500; 
@@ -44,6 +46,11 @@ h1 {
 
 .result {
     color: black;
+}
+
+.result:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 #search_btn {
@@ -104,7 +111,6 @@ h1 {
 }
 
 h2 {
-    font-family: 'Stardos Stencil', cursive !important;
     font-size: 25px;
     color:white;
 }
