@@ -68,7 +68,8 @@ document.addEventListener('DOMContentLoaded', function() {
         var flag = $(`<img id="flag" src="${response[0]['flags']['png']}" alt="flag">`)
         $('#country_info').empty()
         $('#country_info').append(flag)
-        var string_to_display = `${name} is a city in ${countryName} which is a country in ${response[0]['continents'][0]} that has borders with ${response[0]['borders']}. ${countryName} covers the area of ${response[0]['area']} square kilometers, its capital is ${response[0]['capital']} and is home to ${response[0]['population']} people.`
+        var countriesString = stringOfBorders(response[0]['borders'])
+        var string_to_display = `${name} is a city in ${countryName} which is a country in ${response[0]['continents'][0]} ${countriesString} ${countryName} covers the area of ${response[0]['area']} square kilometers, its capital is ${response[0]['capital']} and is home to ${response[0]['population']} people.`
         $('#country_info').append(string_to_display)
     }
 
@@ -175,4 +176,43 @@ document.addEventListener('DOMContentLoaded', function() {
         fetchEarthquakeInfo(lat, lon, countryName, capitalName)
         displayMap(lat, lon)
     }
+
+    function stringOfBorders(names) {
+        if (names == undefined || names.length == 0) {
+            return "that doesn't have a border with other countries."
+        }
+    
+        if (names.length == 1) {
+            return `that has a border with ${lookUpCountry(names[0])}.`
+        }
+    
+        if (names.length == 2) {
+            return `that has borders with ${lookUpCountry(names[0])} and ${lookUpCountry(names[1])}.`
+        }
+        else {
+            var result = "that has borders with "
+            for (var i = 0; i < names.length; i++) {
+                if (i < names.length - 2) {
+                    result += `${lookUpCountry(names[i])}, `
+                }
+                if (i == names.length - 2) {
+                    result += `${lookUpCountry(names[i])} and `
+                }
+                if (i == names.length - 1) {
+                    result += `${lookUpCountry(names[i])}.`
+                }
+            }
+            return result
+        }
+    }
+    
+    function lookUpCountry(code) {
+        for (var i = 0; i < countries.length; i++) {
+            if (countries[i]['code'] == code) {
+                return countries[i]['name']
+            }
+        }
+        return code
+    }
+
 })
