@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Stardos+Stencil&display=swap');
 
 
 .display-4 {
     font-family: 'Stardos Stencil', cursive !important;
-    font-family:'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
     color: black;
     font-size: 3rem;
     font-weight: 500;
@@ -11,7 +11,7 @@
     margin-top: 300px;
 }
 
-.lead {
+p {
     font-family: 'Stardos Stencil', cursive !important;
     color: black;
     font-size: 1.1rem;
@@ -43,6 +43,11 @@
 
 .result {
     color: black;
+}
+
+.result:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 #search_btn {
@@ -85,7 +90,8 @@
         font-size: 16px;
     }
 }
-    
+
+  
 
 /*API Cards*/
 
