@@ -3,7 +3,6 @@
 body {
 
     font-family: 'Stardos Stencil', cursive !important;
-}
 
 h1 {
     color: black;
@@ -38,6 +37,10 @@ h6 {
     color: white;
     align-items: center;
     justify-content: center;
+}
+
+h1 {
+    font-family: 'Stardos Stencil', cursive !important;
 }
 
 
@@ -104,7 +107,7 @@ h6 {
 }
 
 .card-body {
-    background-color: rgb(188, 187, 187) ;
+    background-color: rgb(188, 187, 187);
 }
 
 h2 {
@@ -121,13 +124,22 @@ h2 {
 #flag {
     width: 150px;
     margin-bottom: 30px;
+    padding: 5px;
+}
+
+#country_info {
+    font-family: 'Stardos Stencil', cursive !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /*API icons*/
 .myIcon {
     display: block; 
     margin: 20px auto 45px; 
-    font-size: 55px;
+    font-size: 45px;
     color: white;
 }
 
@@ -153,10 +165,15 @@ h2 {
 
 /*Buttons*/
 
+button {
+    font-family: 'Stardos Stencil', cursive !important;
+}
+
 .ourButtons {
     background-color: grey;
     border: none;
     color: white !important;
+    font-family: 'Stardos Stencil', cursive !important;
 }
 
 
