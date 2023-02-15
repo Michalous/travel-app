@@ -8,6 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     <script src="countryObject.js"></script>
     <script src="script.js"></script>
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
@@ -51,8 +52,76 @@
             <div class="card data" id="earthquake">
             <h2 class="card-header">Earthquakes:</h2>
             <div class="card-body">
-                <span id="earthquake_data"></span>
+                <i class="fas fa-solid fa-triangle-exclamation myIcon"></i>
+             <!-- Button to Open the Modal -->
+                <button type="button" class="btn btn-primary ourButtons" data-toggle="modal" data-target="#myModal">
+                Earthquake magnitudes explained
+                </button>
+                <!-- The Modal -->
+                <div class="modal" id="myModal">  
+                <div class="modal-dialog">
+                <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                <h4 class="modal-title">Earthquake magnitudes explained</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body col-12" id="modalBtn">
+                        <div id="table">
+                        <table class="table table-sm">
+                            <thead>
+                            <tr>
+                                <th scope="col">Mag</th>
+                                <th scope="col">Effects</th>
+                                <th scope="col">No/Year</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">2.5 or less</th>
+                                <td>Usually not felt, but can be recorded by seismograph</td>
+                                <td>Millions</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2.5 to 5.4</th>
+                                <td>Often felt, but only causes minor damage.</td>
+                                <td>500,000</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5.5 to 6.0</th>
+                                <td>Slight damage to buildings and other structures.</td>
+                                <td>350</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">6.1 to 6.9</th>
+                                <td>May cause a lot of damage in very populated areas.</td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">7.0 to 7.9</th>
+                                <td>Major earthquake. Serious damage.</td>
+                                <td>10-15</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">8.0 or greater</th>
+                                <td>Can totally destroy communities near the epicenter.</td>
+                                <td>0.5 - 1</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        </div>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                <button type="button" class="btn btn-danger ourButtons" data-dismiss="modal">Close</button>
+                </div>
+                <!-- API holder -->
+                <div id="earthquake_data"></div>
             </div>
+          </div>
+        </div>
+      </div>
             </div>
         </div>
 
@@ -61,6 +130,7 @@
             <div class="card data" id="facts">
             <h2 class="card-header">Facts:</h2>
             <div class="card-body">
+                <i class="fas fa-solid fa-globe myIcon"></i>
                 <span id="country_info"></span>
             </div>
             </div>
@@ -77,58 +147,32 @@
             <div class="card data" id="map">
             <h2 class="card-header">Map:</h2>
             <div class="card-body">
+                <i class="fas fa-regular fa-map myIcon"></i>
                 <span id="country_map"></span>
             </div>
             </div>
         </div>
 
-            <!-- Info -->   
+        <!-- Info -->   
 
         <div class="cardContainer text-center col-lg-6 col-md-6 col-sm-12">
             <div class="card data" id="searches">
-            <h2 class="card-header">Previous searches:</h2>
+            <h2 class="card-header">
+                Previous searches: 
+            </h2>
             <div class="card-body">
-                <span id="previousSearch"></span>
+                <i class="fas fa-solid fa-clock-rotate-left myIcon"></i>
+                <a id="history_btn" class="btn btn-primary ourButtons">Delete history</a>
+                <div id="previousSearch" class="history"></div>
             </div>
-            <a href="#" class="btn btn-primary ourButtons">Clear searches</a>
+            <div>
             </div>
-        </div>
         </div>
     </div>
 
     <!-- Footer -->
     <footer id="footer">
         <p id="footerText"> Created by Michal, Monica, Musleha + Osita</p>
-
-         <!-- Button to Open the Modal -->
-        <button type="button" class="btn btn-primary ourButtons" data-toggle="modal" data-target="#myModal">
-        Want to know more?
-        </button>
-  
-        <!-- The Modal -->
-        <div class="modal" id="myModal">  
-        <div class="modal-dialog">
-        <div class="modal-content">
-  
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h4 class="modal-title">About Us</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-  
-        <!-- Modal body -->
-        <div class="modal-body">
-          We are a group of students learning Front-End Web Development students through the Skills Bootcamp.<br><br>This is our first project, we hope it's useful! 
-        </div>
-  
-        <!-- Modal footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger ourButtons" data-dismiss="modal">Close</button>
-        </div>
-  
-      </div>
-    </div>
-  </div>
     </footer> 
 
 </body>
