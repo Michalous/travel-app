@@ -1,20 +1,27 @@
 document.addEventListener('DOMContentLoaded', function() {
     var API_Key_Earthquake =  'f6bae715e6msha6463b347ed58d4p1c02a9jsndfe297d44900' //earthquake     
     var API_key = '45c2707f89d16318fbaddd18663434b4' // openweather
-    
-    const options = {
-        method: 'GET',
-        headers: {
-            'X-RapidAPI-Key': API_Key_Earthquake,
-            'X-RapidAPI-Host': 'everyearthquake.p.rapidapi.com'
-        }
-    }
 
     $(document).ready(function() {
-       
+        
+        displayHistory()
+
+        $('#history_btn').click(function() {
+            localStorage.clear()
+            displayHistory()
+        })
+
+        $('#lucky').click(function() {
+            showRandomEntry()
+        })
+
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+            })
+
         $('#search_btn').click(function() {
             $('#results').empty()
-            var location = document.getElementById('search_input')
+            var location = document.getElementById('inputField')
             
             // requests the coordinates of a city typed in by user
             $.get(`https://api.openweathermap.org/geo/1.0/direct?q=${location.value}&limit=5&appid=${API_key}`, function(data, status) {
@@ -51,29 +58,28 @@ document.addEventListener('DOMContentLoaded', function() {
                     saveToLocalStorage(locData[0], locData[1], name, countryName, country)
                     displayHistory()
                     displayMap(locData[0], locData[1])
-                    
-
                 })
             
             })    
         })
     })
-    
+
     function showCountryData(response, countryName, name) {
         var flag = $(`<img id="flag" src="${response[0]['flags']['png']}" alt="flag">`)
-        $('#facts').empty()
-        $('#facts').append(flag)
-        var string_to_display = `${name} is a city in ${countryName} which is a country in ${response[0]['continents'][0]} that has borders with ${response[0]['borders']}. ${countryName} covers the area of ${response[0]['area']} square kilometers, its capital is ${response[0]['capital']} and is home to ${response[0]['population']} people.`
-        $('#facts').append(string_to_display)
+        $('#country_info').empty()
+        $('#country_info').append(flag)
+        var countriesString = stringOfBorders(response[0]['borders'])
+        var string_to_display = `${name} is a city in ${countryName} which is a country in ${response[0]['continents'][0]} ${countriesString} ${countryName} covers the area of ${response[0]['area']} square kilometers, its capital is ${response[0]['capital']} and is home to ${response[0]['population']} people.`
+        $('#country_info').append(string_to_display)
     }
 
     function displayMap(lat, lon) {
         $('#map').empty()
         var mapToDisplay =  `<iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/view?key=AIzaSyB3QTuugkMPxf0T9jl4um4NovYGsnTO2lM&center=${lat},${lon}&zoom=6" allowfullscreen></iframe>`
         $('#map').append(mapToDisplay)
-     }
+        }
 
-     function fetchEarthquakeInfo(lat, lon, countryName, name) {
+        function fetchEarthquakeInfo(lat, lon, countryName, name) {
         const options = {
             method: 'GET',
             headers: {
@@ -90,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
             )
             .catch(err => console.error(err));
     }
-    
+
     function fetchCountryInfo(country, countryName, name) {
         fetch(`https://restcountries.com/v3.1/alpha?codes=${country}`)
             .then(response => response.json())
@@ -101,16 +107,17 @@ document.addEventListener('DOMContentLoaded', function() {
             )
             .catch(err => console.error(err))
     }
-   
+
     function showEarthQuakeData(response, countryName, name) {
-        $('#earthquake').empty()
+        $('#earthquake_data').empty()
         var last_earthquake = `<p>The last earthquake close to ${name} happened on ${response['data'][0]['date']}.</p>`
-        $('#earthquake').append(last_earthquake)
+        console.log(last_earthquake)
+        $('#earthquake_data').append(last_earthquake)
         var text_string = response['data'][0]['title']
         var magnitude = text_string.slice(2, 5)
         var earhquake_location = text_string.slice(8, text_string.length)
         var earthquake_magnitude = `<p>It had a magnitude of ${magnitude} and occured ${earhquake_location}</p>`
-        $('#earthquake').append(earthquake_magnitude)
+        $('#earthquake_data').append(earthquake_magnitude)
         console.log('hello', response)
     }
 
@@ -156,4 +163,56 @@ document.addEventListener('DOMContentLoaded', function() {
             displayMap(lat, lon)
         })
     }
+
+    function showRandomEntry() {
+        x = Math.floor(Math.random() * cities.length)
+        console.log(cities[x])
+        var lat = cities[x]['CapitalLatitude']
+        var lon = cities[x]['CapitalLongitude']
+        var capitalName = cities[x]['CapitalName']
+        var countryName = cities[x]['CountryName']
+        var countryCode = cities[x]['CountryCode']
+        fetchCountryInfo(countryCode, countryName, capitalName)
+        fetchEarthquakeInfo(lat, lon, countryName, capitalName)
+        displayMap(lat, lon)
+    }
+
+    function stringOfBorders(names) {
+        if (names == undefined || names.length == 0) {
+            return "that doesn't have a border with other countries."
+        }
+    
+        if (names.length == 1) {
+            return `that has a border with ${lookUpCountry(names[0])}.`
+        }
+    
+        if (names.length == 2) {
+            return `that has borders with ${lookUpCountry(names[0])} and ${lookUpCountry(names[1])}.`
+        }
+        else {
+            var result = "that has borders with "
+            for (var i = 0; i < names.length; i++) {
+                if (i < names.length - 2) {
+                    result += `${lookUpCountry(names[i])}, `
+                }
+                if (i == names.length - 2) {
+                    result += `${lookUpCountry(names[i])} and `
+                }
+                if (i == names.length - 1) {
+                    result += `${lookUpCountry(names[i])}.`
+                }
+            }
+            return result
+        }
+    }
+    
+    function lookUpCountry(code) {
+        for (var i = 0; i < countries.length; i++) {
+            if (countries[i]['code'] == code) {
+                return countries[i]['name']
+            }
+        }
+        return code
+    }
+
 })

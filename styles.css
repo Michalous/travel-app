@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Stardos+Stencil&display=swap');
 
 .display-4 {
     font-family: 'Stardos Stencil', cursive !important;
@@ -11,7 +11,7 @@
     margin-top: 300px;
 }
 
-.lead {
+p {
     font-family: 'Stardos Stencil', cursive !important;
     color: black;
     font-size: 1.1rem;
@@ -21,23 +21,21 @@
     
 }
     
-
 /*Jumbotron*/
 
-.jumbotron {
+#jumbotron {
     position: relative;
     background-image: url("./Images/travel-image-unsplash.jpg");
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
     text-align: center;
     display: flex;
     flex-direction: column;
-    color: black;
+    color: white;
     align-items: center;
-    display: flex;
     justify-content: center;
-
 }
 
 
@@ -57,15 +55,15 @@
     color: #000;
 }
 
-.form-control {
-        margin-top: 40px;
-        width: 70vw;
-        max-width: 700px;
-        height: 50px;
-        font-size: 25px;
-        padding-left: 60px;
-        border-radius: 20px;
-        border: 1px solid black;
+#inputField {
+    margin-top: 40px;
+    width: 70vw;
+    max-width: 700px;
+    height: 50px;
+    font-size: 25px;
+    padding-left: 60px;
+    border-radius: 20px;
+    border: 1px solid black;
 }
 
 #results {
@@ -85,12 +83,8 @@
         font-size: 16px;
     }
 }
-    
-
-/*API Cards*/
 
 /*APIs*/
-
 
 .cardContainer {
     display: flex;
@@ -99,7 +93,8 @@
 }
 
 h2 {
-    font-family: 'Stardos Stencil', cursive !important;
+    font-family:'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+    font-size: 25px;
 }
 
 .data {
