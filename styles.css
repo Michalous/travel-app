@@ -112,6 +112,11 @@ h1 {
     background-color: rgb(188, 187, 187);
 }
 
+.card {
+    overflow: scroll;
+    background-color: rgb(188, 187, 187);;
+}
+
 h2 {
     font-size: 25px;
     color:white;
@@ -217,6 +222,12 @@ button.launch:hover {
     transform: rotate(90deg);
     animation: rotateB 2s linear infinite;
 }
+
+#quake-kinetic {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @keyframes rotateA {
     0%,
     25% {
