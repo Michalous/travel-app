@@ -39,9 +39,17 @@ As a user click the search button with the input of the city of their choice, th
 
 ## Credits
 
-N/A
+Collaborators:
 
+Michal Skalsky: https://github.com/Michalous
 
+Monica Lewis: https://github.com/monicaclarelewis 
+
+Musleha Begum: https://github.com/Musleha1
+
+Osita Nduka: https://github.com/OsitaNduka
+
+Third-Party assets for countdown button:  https://github.com/bradtraversy/50projects50days
 
 
 ## License
