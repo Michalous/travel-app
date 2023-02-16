@@ -14,7 +14,7 @@ Advances in Technology have been proven to be helpful. This Travel tracker app i
 
 The app was created using agile development methodologies. We implemented feature and bug fixes using git branch workflow and pull requests.
 
-
+https://michalous.github.io/travel-app/
 
 
 
@@ -32,7 +32,8 @@ As a user click the search button with the input of the city of their choice, th
 
 
 
-![App Screenshort]()
+![App Screenshort](./Images/Travel-app.PNG)
+
 
 
 
