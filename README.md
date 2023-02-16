@@ -32,17 +32,19 @@ As a user click the search button with the input of the city of their choice, th
 
 
 
-![App Screenshort](./Images/Travel-app.PNG)
+![App Screenshot](./Images/Travel-app.PNG)
 
 
 
 
 ## Credits
 
+N/A
+
 
 
 
 ## License
 
-Please refer to the License in the repo
+Please refer to the License in the repo.
 
