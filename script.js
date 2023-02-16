@@ -1,18 +1,21 @@
+// You can put the script tag into head section of HTML if you wrap all code in function below
 document.addEventListener('DOMContentLoaded', function() {
     var API_Key_Earthquake =  'f6bae715e6msha6463b347ed58d4p1c02a9jsndfe297d44900' //earthquake     
     var API_key = '45c2707f89d16318fbaddd18663434b4' // openweather
 
     $(document).ready(function() {
         
+        // pulls data from localStorage and displays it when page loaded
         displayHistory()
 
+        // specifies what happens when you press delete history button
         $('#history_btn').click(function() {
             localStorage.clear()
             displayHistory()
         })
 
+        // specifies what happens when you click lucky button
         $('#lucky').click(function() {
-            console.log('click')
             $('#lucky-modal').modal('show')
             resetDOM()
             runAnimation()
@@ -20,10 +23,12 @@ document.addEventListener('DOMContentLoaded', function() {
             showRandomEntry()
         })
 
+        // bootstrap tooltip
         $(function () {
             $('[data-toggle="tooltip"]').tooltip()
             })
-
+        
+        // specifies what happens when search button is pressed
         $('#search_btn').click(function() {
             $('#results').empty()
             var location = document.getElementById('inputField')
@@ -36,7 +41,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 $('#results').append(noResults) 
             }
             // displays options returned by request (up to 5)
-            console.log(data)
             for (var i = 0; i < data.length; i++) {
                     var item = $(`<div class="result" data-country="${data[i].country}" data-name="${data[i].name}" data-location='["${data[i].lat}", "${data[i].lon}", "${data[i].name}"]'></div>`).text(`${data[i].name}, ${data[i].country}, ${data[i].state}`)
                     $('#results').append(item)
@@ -47,9 +51,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     var locData = $(this).data('location')
                     var name = $(this).data('name')
                     var country = $(this).data('country')
-                    console.log(locData)
-                    console.log(name)
-                    console.log(country)
                     $('#results').empty()
                     for (var i = 0; i < listOfCountryObjects.length; i++) {
                         if (listOfCountryObjects[i]['ISO2'] == country) {
@@ -98,8 +99,6 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(response => response.json())
             .then(response => 
                 showEarthQuakeData(response, countryName, name)
-                // console.log(response['data'][0]['date']) 
-                // $('#earthquake_results').text(response.data[0]['title'])
             )
             .catch(err => console.error(err));
     }
@@ -110,8 +109,6 @@ document.addEventListener('DOMContentLoaded', function() {
         fetch(`https://restcountries.com/v3.1/alpha?codes=${country}`)
             .then(response => response.json())
             .then(response => 
-                // console.log(response)
-                // $('#covid_data').text(response[0]['capital'])
                 showCountryData(response, countryName, name)
             )
             .catch(err => console.error(err))
@@ -120,14 +117,12 @@ document.addEventListener('DOMContentLoaded', function() {
     function showEarthQuakeData(response, countryName, name) {
         $('#earthquake_data').empty()
         var last_earthquake = `<p>The last earthquake close to ${name} happened on ${response['data'][0]['date']}.</p>`
-        console.log(last_earthquake)
         $('#earthquake_data').append(last_earthquake)
         var text_string = response['data'][0]['title']
         var magnitude = text_string.slice(2, 5)
         var earhquake_location = text_string.slice(8, text_string.length)
         var earthquake_magnitude = `<p>It had a magnitude of ${magnitude} and occured ${earhquake_location}</p>`
         $('#earthquake_data').append(earthquake_magnitude)
-        console.log('hello', response)
     }
 
     // ========== localStorage ==========
@@ -175,7 +170,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function showRandomEntry() {
         x = Math.floor(Math.random() * cities.length)
-        console.log(cities[x])
         var lat = cities[x]['CapitalLatitude']
         var lon = cities[x]['CapitalLongitude']
         var capitalName = cities[x]['CapitalName']
