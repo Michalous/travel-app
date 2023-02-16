@@ -12,6 +12,11 @@ document.addEventListener('DOMContentLoaded', function() {
         })
 
         $('#lucky').click(function() {
+            console.log('click')
+            $('#lucky-modal').modal('show')
+            resetDOM()
+            runAnimation()
+            const myTimeout = setTimeout(scrollDown, 4300)
             showRandomEntry()
         })
 
@@ -79,7 +84,9 @@ document.addEventListener('DOMContentLoaded', function() {
         $('#map').append(mapToDisplay)
         }
 
-        function fetchEarthquakeInfo(lat, lon, countryName, name) {
+    function fetchEarthquakeInfo(lat, lon, countryName, name) {
+        $('#earthquake_data').empty()
+        $('#earthquake_data').append('<div id="quake-kinetic" class="kinetic"></div>')
         const options = {
             method: 'GET',
             headers: {
@@ -98,6 +105,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function fetchCountryInfo(country, countryName, name) {
+        $('#country_info').empty()
+        $('#country_info').append('<div class="kinetic"></div>')
         fetch(`https://restcountries.com/v3.1/alpha?codes=${country}`)
             .then(response => response.json())
             .then(response => 
@@ -213,6 +222,46 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
         return code
+    }
+
+    // ======== countdown animation =========
+    const nums = document.querySelectorAll('.nums span')
+    const counter = document.querySelector('.counter')
+    const finalMessage = document.querySelector('.final')
+    const replay = document.querySelector('#replay')
+
+    function runAnimation() {
+        nums.forEach((num, idx) => {
+            const nextToLast = nums.length - 1
+
+            num.addEventListener('animationend', (e) => {
+                if(e.animationName === 'goIn' && idx !== nextToLast) {
+                    num.classList.remove('in')
+                    num.classList.add('out')
+                } else if (e.animationName === 'goOut' && num.nextElementSibling) {
+                    num.nextElementSibling.classList.add('in')
+                } else {
+                    counter.classList.add('hide')
+                    finalMessage.classList.add('show')
+                }
+            })
+        })
+    }
+
+    function resetDOM() {
+        counter.classList.remove('hide')
+        finalMessage.classList.remove('show')
+
+        nums.forEach((num) => {
+            num.classList.value = ''
+        })
+
+        nums[0].classList.add('in')
+    }
+
+    function scrollDown() {
+        document.getElementById('earthquake').scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"})
+        $('.modal').modal('hide')
     }
 
 })
